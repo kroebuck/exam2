@@ -1,0 +1,113 @@
+%%THIS IS A LATEX FILE
+
+\newtheorem{remarks}{Remarks}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{corollary}{Corollary}
+
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath}
+\usepackage[letterpaper,margin=0.75in,left=1.25in,nohead]{geometry}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{bbm}
+\usepackage{tikz}
+\usetikzlibrary{intersections}
+\usepackage{subcaption}
+\usepackage{mathrsfs}
+\usepackage{mdframed}
+
+\pagestyle{myheadings}
+
+%\input{SETPS}
+
+%\input{psfig}
+
+%\markright{\rm \sc \hspace*{1.5truein} Complex Analysis: Exam 2B}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\Log}{\text{\,Log\,}}
+
+
+
+\begin{document}
+\title{Complex Analysis: Exam 2B}
+\author{Kevin Roebuck}
+\maketitle
+
+\begin{enumerate}
+
+
+\item (10) Harmonic functions.
+\begin{enumerate}
+  \item Find a harmonic function $\phi(x,y)$ on the annulus $1<|z-(1+i)|<3$ which satisfies $\phi\equiv 1$ on $|z-(1+i)|=1$ and $\phi\equiv-1$ on $|z-(1+i)|=3$.
+
+  \begin{mdframed}
+  For any value of the constants $A$ and $B$, the function $$\phi(x,y) = A\Log |z - (1 + i)| + B$$ is harmonic, and we only have to adjust $A$ and $B$ so as to achieve the prescribed boundary conditions. We require that
+  \begin{align*}
+    A\Log|2 - (1 + i)| + B &= 1, \\
+    A\Log|4 - (1 + i)| + B &= 3.
+  \end{align*}
+  Since $|2 - (1 + i)| = |1 - i| = \sqrt 2$ and $|4 - (1 + i)| = |3 + i| = \sqrt{10}$, we have
+  \begin{align*}
+    A\Log\sqrt 2 + B &= 1, \\
+    A\Log\sqrt{10} + B &= 3.
+  \end{align*}
+  Subtracting the first equation from the second yields $$A(\Log\sqrt{10} - \Log\sqrt 2) = A\Log(5^{1/2}) = \frac{1}{2}A\Log 5 = 2$$
+  from which we have $A = 4 / \Log 5$. Substitution of $A$ back into either boundary condition equation gives $$\frac{4}{\Log 5}\Log\sqrt 2 + B = \frac{\Log 4}{\Log 5} + B = 1.$$ Clearly then $B = 1 - \Log 4 / \Log 5$, and our desired function is
+  \begin{align*}
+  \phi(x,y) &= \frac{4}{\Log 5}\Log |z - (1 + i)| + 1 - \frac{\Log 4}{\Log 5} \\
+  &= \frac{4\Log|z - (1 + i)| + \Log(5/4)}{\Log 5}.
+  \end{align*}
+  \end{mdframed}
+
+  \item Find a harmonic function $\phi(x,y)$ on the half plane $y>0$ with $\phi\equiv 1$ on $\{(x,y):y=0, x<-2\}$, $\phi\equiv 0$ on $\{(x,y):y=0, -2<x<3\}$,and $\phi\equiv -1$ on $\{(x,y):y=0, x>3\}$.
+
+  \begin{mdframed}
+  a
+  \end{mdframed}
+\end{enumerate}
+
+\item (5) Derive the formula \[\tanh^{-1}(z)=\frac{1}{2}\log\left ( \frac{1+z}{1-z}\right ).\] Be sure to make note during the derivation of any step where you are choosing a branch.
+
+\begin{mdframed}
+  a
+\end{mdframed}
+
+\item (5)  Show that
+\[
+\left | \int_{\gamma}Log (z)dz\right |\leq \frac{\pi^2}{2},
+\]
+where $\gamma$ is the arc of the unit circle contained in the right half plane $\{(x,y): x\geq 0\}$.
+
+\begin{mdframed}
+  a
+\end{mdframed}
+
+\item (10) Compute $$\int_{\Gamma}\overline{z}^2\,dz$$ where $\Gamma$ is the perimeter of the square with vertices $-1-i, 1-i,1+i,$ and $-1+i$ in that order.
+
+\begin{mdframed}
+  a
+\end{mdframed}
+
+\item (10) Suppose that $p(z)$ is an $n$th degree polynomial for some $n\geq 1$. Show that if $C_R$ represents a circle of radius $R$ centered at some point in the complex plane, then
+    \[
+    \int_{C_R}\frac{p'(z)}{p(z)}dz,
+    \]
+    counts the number of roots of $p(z)$ contained in the interior of the circle $C_R$. For simplicity you may assume that $p(z)$ has $n$ distinct roots. (Hint: It helps to create and compute some simple specific examples.)
+
+\begin{mdframed}
+  a
+\end{mdframed}
+
+\end{enumerate}
+\end{document}
+
+%Useful blocks to copy
+\begin{description}
+\item{a)}{\em} \item{b)}{\em} \item{c)}{\em} \item{d)}{\em}
+\end{description}
